@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한식 메뉴 추천</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #menu {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>한식 메뉴 추천</h2>
+    <button onclick="recommendMenu()">메뉴 추천</button>
+    <p id="menu"></p>
+
+    <script>
+        // Array of Korean cuisine menu options
+        const koreanMenu = [
+            "비빔밥",
+            "김치찌개",
+            "불고기",
+            "된장찌개",
+            "삼겹살",
+            "떡볶이",
+            "순두부찌개",
+            "갈비탕",
+            "잡채",
+            "육회",
+            "부대찌개",
+            "곰탕",
+            "해물파전",
+            "콩나물국밥",
+            "감자탕",
+            "냉면",
+            "쭈꾸미볶음",
+            "보쌈",
+            "김밥",
+            "갈비찜",
+            "제육볶음",
+            "김치전",
+            "계란국",
+            "찜닭",
+            "매운탕",
+            "순대",
+            "오삼불고기",
+            "닭갈비",
+            "해물찜",
+            "알탕",
+            "뼈해장국",
+            "김치전",
+            "닭볶음탕",
+            "수육",
+            "총각김치",
+            "막국수",
+            "콩비지찌개",
+            "메밀전병",
+            "골뱅이무침",
+            "간장게장",
+            "양념게장",
+            "부추전",
+            "계란말이",
+            "잡탕",
+            "고추장불고기",
+            "갈치조림",
+            "조개찜",
+            "생선구이",
+            "물회",
+            "소불고기",
+            "닭튀김",
+            "감자전",
+            "쟁반짜장",
+            "알밥",
+            "곱창구이",
+            "낙지볶음",
+            "꼼장어볶음",
+            "계란찜",
+            "김치볶음밥",
+            "도토리묵",
+            "골뱅이소면",
+            "오징어채볶음",
+            "참치김밥",
+            "메추리알장조림",
+            "두부구이",
+            "김치찜",
+            "치킨",
+            "피자",
+            "찜닭",
+            "소고기무국",
+            "누룽지",
+            "해물찜",
+            "감자전",
+            "어묵볶음"
+        ];
+
+        function recommendMenu() {
+            // Randomly select a menu item from the array
+            const randomIndex = Math.floor(Math.random() * koreanMenu.length);
+            const recommendedMenu = koreanMenu[randomIndex];
+
+            // Display the recommended menu to the user
+            const menuElement = document.getElementById('menu');
+            menuElement.textContent = `오늘 점심으로는 ${recommendedMenu} 어떠세요?`;
+        }
+    </script>
+</body>
+</html>
